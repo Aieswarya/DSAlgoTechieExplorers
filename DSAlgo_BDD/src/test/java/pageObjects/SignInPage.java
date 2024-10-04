@@ -16,8 +16,8 @@ package pageObjects;
 			PageFactory.initElements(rdriver, this);
 		}
 		
-		@FindBy(xpath="//button[contains(text(),'Get Started')]")
-		WebElement btngetstarted;
+		//@FindBy(xpath="//button[contains(text(),'Get Started')]")
+		//WebElement btngetstarted;
 
 		@FindBy(linkText="Sign in")
 		WebElement btnSignin;
@@ -34,5 +34,32 @@ package pageObjects;
 		@FindBy(xpath ="//input[@value='Login']")
 		WebElement btnlogin;
 		
+		public void clickSignIn() {
+			btnSignin.click();
+		}
+		
+		public void Username() {
+			txtusername.clear();
+			txtusername.sendKeys(null);
+			
+		}
+		
+		public void Password() {
+			txtpassword.clear();
+			txtpassword.sendKeys(null);
+		}
+	
+	public void clickLogin() {
+		btnlogin.click();
 	}
+	
+}
+	
+	
+	
+	
+	
+	
+	
+	
 
