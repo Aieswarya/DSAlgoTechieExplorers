@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features={"src/test/resources/features"},
 		glue={"numpyninja.dsalgo.stepDefinitions"},
-		dryRun=true,
-		monochrome=true,
+		dryRun=false,
+		monochrome=false,
 		plugin= {"rerun:failed_scenarios/failed_scenarios.txt",
 				"html:target/cucumber-reports/report.html",
 				"pretty",
