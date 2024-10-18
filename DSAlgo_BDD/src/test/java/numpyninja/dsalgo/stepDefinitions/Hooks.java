@@ -13,6 +13,7 @@ import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import numpyninja.dsalgo.constants.Constants;
+import numpyninja.dsalgo.utilities.ExcelUtils;
 import numpyninja.dsalgo.utilities.PropertiesConfig;
 import numpyninja.dsalgo.webdriver_manager.DriverManager;
 
@@ -27,15 +28,17 @@ public class Hooks {
 		System.out.println("In Hooks class started ....");
 		try
 		{
-			//LOGGER.info("Instantiating the PropertiesReader class");
+			
 			
 			PropertiesConfig propertiesConfig = new PropertiesConfig();
-			//LOGGER.info("Loading the Properties file ...");
-			propertiesConfig.loadProperties();
-			//LOGGER.info("Checking the Driver is null or not null");
 			
-			if(DriverManager.getDriver() == null)
-			{
+			propertiesConfig.loadProperties();
+			
+			ExcelUtils excelutils = new ExcelUtils();
+			
+			excelutils.getLogin();
+			
+			  
 				LOGGER.info("Driver is null, instantiating it ");
 				DriverManager.launchBrowser();
 				DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
@@ -43,8 +46,9 @@ public class Hooks {
 				
 				LOGGER.info("DS Algo website launched");
 				System.out.println("Completed launching website");
+			  
+			
 			}
-		}
 		catch(Exception exception) {
 			exception.printStackTrace();
 			
@@ -55,6 +59,7 @@ public class Hooks {
 	@After
 	public void teardown()
 	{
+		DriverManager.getDriver().close();
 		DriverManager.getDriver().quit();
 		LOGGER.info("Driver is shutdown");
 		System.out.println("shutting down");
