@@ -12,47 +12,33 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class ExcelUtils {
-	
-	
-	public static  void getLogin() {
-		
-		
+
+	public static void getLogin() {
+
 		try {
 			Constants constants = new Constants();
-			
+
 			FileInputStream file = new FileInputStream(new File("Data.xlsx"));
-			
-			
+
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
-			
+
 			Sheet sheet1 = workbook.getSheet("LOGIN");
-			
+
 			Row row1 = sheet1.getRow(1);
-			
-			Constants.USERNAME=row1.getCell(0).getStringCellValue();
-			constants.PASSWORD=row1.getCell(1).getStringCellValue();
-			// Read Incorrect credential values
-			
-			Row row4 = sheet1.getRow(4);
-			constants.INCORRECT_USERNAME=row4.getCell(0).getStringCellValue();
-			constants.INCORRECT_PASSWORD=row4.getCell(1).getStringCellValue();
-			
+
+			Constants.USERNAME = row1.getCell(0).getStringCellValue();
+			constants.PASSWORD = row1.getCell(1).getStringCellValue();
+
 			Sheet sheet2 = workbook.getSheet("EDITOR");
 			Row row2 = sheet2.getRow(1);
-			constants.PYTHON_EDITOR_INPUT=row2.getCell(0).getStringCellValue();
-			constants.PYTHON_EDITOR_OUTPUT=row2.getCell(1).getStringCellValue();
-			
-			
-			
+			constants.PYTHON_EDITOR_INPUT = row2.getCell(0).getStringCellValue();
+			constants.PYTHON_EDITOR_OUTPUT = row2.getCell(1).getStringCellValue();
+
 			workbook.close();
-		} catch (IOException exception)
-		{
+		} catch (IOException exception) {
 			exception.printStackTrace();
-			}
-		
-		
-	}	
-	
-	
-	
+		}
+
+	}
+
 }
