@@ -31,6 +31,11 @@ public class ExcelUtils {
 			
 			Constants.USERNAME=row1.getCell(0).getStringCellValue();
 			constants.PASSWORD=row1.getCell(1).getStringCellValue();
+			// Read Incorrect credential values
+			
+			Row row4 = sheet1.getRow(4);
+			constants.INCORRECT_USERNAME=row4.getCell(0).getStringCellValue();
+			constants.INCORRECT_PASSWORD=row4.getCell(1).getStringCellValue();
 			
 			Sheet sheet2 = workbook.getSheet("EDITOR");
 			Row row2 = sheet2.getRow(1);

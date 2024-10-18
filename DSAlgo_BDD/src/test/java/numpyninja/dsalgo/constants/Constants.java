@@ -12,6 +12,8 @@ public class Constants {
 	public static String PYTHON_EDITOR_INPUT;
 	public static String PYTHON_EDITOR_OUTPUT;
 	
+	public static String INCORRECT_USERNAME;
+	public static String INCORRECT_PASSWORD;
 	
 	
 
