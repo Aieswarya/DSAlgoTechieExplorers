@@ -120,15 +120,15 @@ public class GraphStepDefinition {
 	 * Common step definitions
 	 **********************/
 
-	@When("The user click {string} Run Button")
-	public void the_user_click_Run_button(String string) {
+	@When("The user click Run Button")
+	public void the_user_click_Run_button() {
 		gp.clickRun();
 		LOGGER.info("The user clicks Run Button");
 
 	}
 
-	@When("The user clicks {string} Try Here button")
-	public void the_user_clicks_Try_Here_button(String string) {
+	@When("The user clicks Try Here button")
+	public void the_user_clicks_Try_Here_button() {
 		gp.clickTryHere();
 		LOGGER.info("The user clicks Try Here Button");
 

@@ -40,7 +40,8 @@ public class Graph {
 	@CacheLookup
 	private static WebElement geditor;
 
-	@FindBy(xpath = "//*[@id=\"answer_form\"]/button")
+	//@FindBy(xpath = "//*[@id=\"answer_form\"]/button")
+	@FindBy(xpath="//*[@id='answer_form']/button")
 	@CacheLookup
 	private static WebElement RUN_BTN;
 
