@@ -33,9 +33,9 @@ public class Hooks {
 			ExcelUtils excelutils = new ExcelUtils();
 
 			excelutils.getLogin();
-			System.out.println("I am going to call launchbrowser");
+
 			DriverManager.launchBrowser();
-			System.out.println("Driver value is set");
+
 			DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 			DriverManager.getDriver().get(Constants.APP_URL);
 
@@ -51,9 +51,9 @@ public class Hooks {
 
 	@After
 	public void teardown() {
-		//DriverManager.getDriver().close();
+		// DriverManager.getDriver().close();
 		DriverManager.getDriver().quit();
-	
+
 		LOGGER.info("Driver is shutdown");
 		System.out.println("shutting down");
 	}
@@ -64,7 +64,6 @@ public class Hooks {
 			byte[] screenshotTaken = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshotTaken, "image/png", "error screen");
 		}
-		
 
-}
+	}
 }

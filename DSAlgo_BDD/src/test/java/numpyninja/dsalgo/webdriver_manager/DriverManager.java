@@ -12,50 +12,51 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import numpyninja.dsalgo.constants.Constants;
 
 public class DriverManager {
-	
-	private static  WebDriver driver = null;
+
+	private static WebDriver driver = null;
 	private static final Logger LOGGER = LogManager.getLogger(DriverManager.class);
-	
-	public static void launchBrowser()
-	{
-		
+
+	public static void launchBrowser() {
+		System.out.println("Entering WebDriver Manager");
+
 		try {
-			switch(Constants.BROWSER) {
-			case"chrome":
+			switch (Constants.BROWSER) {
+			case "chrome":
 				WebDriverManager.chromedriver().setup();
-				LOGGER.info("Launching "+ Constants.BROWSER);
-				driver=new ChromeDriver();
+				LOGGER.info("Launching " + Constants.BROWSER);
+				driver = new ChromeDriver();
 				break;
-			case"firefox":
+			case "firefox":
 				WebDriverManager.firefoxdriver().setup();
-				LOGGER.info("Launching "+ Constants.BROWSER);
-				driver=new FirefoxDriver();
+				LOGGER.info("Launching " + Constants.BROWSER);
+				driver = new FirefoxDriver();
 				break;
-			case"edge":
+			case "edge":
 				WebDriverManager.edgedriver().setup();
-				LOGGER.info("Launching "+ Constants.BROWSER);
-				driver=new EdgeDriver();
+				LOGGER.info("Launching " + Constants.BROWSER);
+				driver = new EdgeDriver();
 				break;
-			case"ie":
+			case "ie":
 				WebDriverManager.iedriver().setup();
-				LOGGER.info("Launching "+ Constants.BROWSER);
-				driver=new InternetExplorerDriver();
+				LOGGER.info("Launching " + Constants.BROWSER);
+				driver = new InternetExplorerDriver();
 				break;
 			default:
 				WebDriverManager.chromedriver().setup();
-				LOGGER.info("Launching "+ Constants.BROWSER);
-				driver=new ChromeDriver();
+				LOGGER.info("Launching " + Constants.BROWSER);
+				driver = new ChromeDriver();
 				break;
-				}
-			
-		}
-		catch(Exception exception)
-		{
+			}
+
+		} catch (Exception exception) {
 			exception.printStackTrace();
 		}
 	}
 
 	public static WebDriver getDriver() {
+
+		System.out.println("Entering get Driver Manager");
+
 		return driver;
 	}
 }
