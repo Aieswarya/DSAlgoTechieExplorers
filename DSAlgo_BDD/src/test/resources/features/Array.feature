@@ -21,14 +21,6 @@ Feature: Array Data Structure
   
   Background: Login to the page
   	Given the user is logged in
-  	
-  Scenario: Testing the Text Editor with valid code
-    When The user writes the Valid python code in Editor and Clicks Run button
-    Then The User should be able to see the output in the console
-    
-  Scenario: Testing the Text Editor with InValid code
-    When The user writes the invalid python code in Editor and Clicks Run button
-    Then The User should should be in the same page with an alert window
     
   Scenario: Checking "Array" page loads from "Home"
     When the "Array" link is clicked on "Home"
@@ -69,6 +61,18 @@ Feature: Array Data Structure
   Scenario: Checking "Editor" page loads from "Arrays in Python"
     When the "Editor" link is clicked on "Arrays in Python"
     Then the expected "Editor" page should load
+  	
+  Scenario: Testing the Text Editor with valid code from "Arrays in Python"
+    When the "Arrays in Python" link is clicked on "Array"
+    When the "Editor" link is clicked on "Arrays in Python"
+    When The user writes the Valid python code in Editor and Clicks Run button
+    Then The User should be able to see the output in the console
+    
+  Scenario: Testing the Text Editor with InValid code from "Arrays in Python"
+    When the "Arrays in Python" link is clicked on "Array"
+    When the "Editor" link is clicked on "Arrays in Python"
+    When The user writes the invalid python code in Editor and Clicks Run button
+    Then The User should should be in the same page with an alert window
     
   Scenario: Checking "Practice" page loads from "Arrays in Python"
     When the "Practice" link is clicked on "Arrays in Python"
@@ -93,6 +97,18 @@ Feature: Array Data Structure
   Scenario: Checking "Editor" page loads from "Arrays using List"
     When the "Editor" link is clicked on "Arrays using List"
     Then the expected "Editor" page should load
+  	
+  Scenario: Testing the Text Editor with valid code from "Arrays using List"
+    When the "Arrays using List" link is clicked on "Array"
+    When the "Editor" link is clicked on "Arrays using List"
+    When The user writes the Valid python code in Editor and Clicks Run button
+    Then The User should be able to see the output in the console
+    
+  Scenario: Testing the Text Editor with InValid code from "Arrays using List"
+    When the "Arrays using List" link is clicked on "Array"
+    When the "Editor" link is clicked on "Arrays using List"
+    When The user writes the invalid python code in Editor and Clicks Run button
+    Then The User should should be in the same page with an alert window
     
   Scenario: Checking "Practice" page loads from "Arrays using List"
     When the "Practice" link is clicked on "Arrays using List"
@@ -117,6 +133,18 @@ Feature: Array Data Structure
   Scenario: Checking "Editor" page loads from "Basic Operations in Lists"
     When the "Editor" link is clicked on "Basic Operations in Lists"
     Then the expected "Editor" page should load
+  	
+  Scenario: Testing the Text Editor with valid code from "Basic Operations in Lists"
+    When the "Basic Operations in Lists" link is clicked on "Array"
+    When the "Editor" link is clicked on "Basic Operations in Lists"
+    When The user writes the Valid python code in Editor and Clicks Run button
+    Then The User should be able to see the output in the console
+    
+  Scenario: Testing the Text Editor with InValid code from "Basic Operations in Lists"
+    When the "Basic Operations in Lists" link is clicked on "Array"
+    When the "Editor" link is clicked on "Basic Operations in Lists"
+    When The user writes the invalid python code in Editor and Clicks Run button
+    Then The User should should be in the same page with an alert window
     
   Scenario: Checking "Practice" page loads from "Basic Operations in Lists"
     When the "Practice" link is clicked on "Basic Operations in Lists"
@@ -141,6 +169,18 @@ Feature: Array Data Structure
   Scenario: Checking "Editor" page loads from "Applications of Array"
     When the "Editor" link is clicked on "Applications of Array"
     Then the expected "Editor" page should load
+  	
+  Scenario: Testing the Text Editor with valid code from "Applications of Array"
+    When the "Applications of Array" link is clicked on "Array"
+    When the "Editor" link is clicked on "Applications of Array"
+    When The user writes the Valid python code in Editor and Clicks Run button
+    Then The User should be able to see the output in the console
+    
+  Scenario: Testing the Text Editor with InValid code from "Applications of Array"
+    When the "Applications of Array" link is clicked on "Array"
+    When the "Editor" link is clicked on "Applications of Array"
+    When The user writes the invalid python code in Editor and Clicks Run button
+    Then The User should should be in the same page with an alert window
     
   Scenario: Checking "Practice" page loads from "Applications of Array"
     When the "Practice" link is clicked on "Applications of Array"

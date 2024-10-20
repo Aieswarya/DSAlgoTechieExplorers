@@ -27,7 +27,6 @@ public class ArrayStepDefinition extends BaseClass {
 	
 	@When("The user writes the Valid python code in Editor and Clicks Run button")
 	public void the_good_code_is_run() {
-		DriverManager.getDriver().get(getPageUrl("Editor"));
 		arrayPage.enterValidCode();
 	}
 
@@ -39,7 +38,6 @@ public class ArrayStepDefinition extends BaseClass {
 
 	@When("The user writes the invalid python code in Editor and Clicks Run button")
 	public void the_user_writes_the_invalid_python_code() {
-		DriverManager.getDriver().get(getPageUrl("Editor"));
 		arrayPage.enterInValidCode();
 	}
 
