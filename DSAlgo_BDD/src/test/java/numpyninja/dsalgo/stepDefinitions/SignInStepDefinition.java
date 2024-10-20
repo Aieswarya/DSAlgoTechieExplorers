@@ -43,10 +43,11 @@ public class SignInStepDefinition {
 	
 	@Given("The user is in SignIn page")
 	public void The_user_is_in_SignIn_page() {
-		System.out.println("The user is in SignInPage page");
+		
 		sp.clickSignIn();
 		System.out.println(DriverManager.getDriver().getTitle());
-	    LOGGER.info("SignInPage button is clicked");
+	    LOGGER.info("SignIn button is clicked");
+
 	}
     
 
@@ -101,4 +102,8 @@ public class SignInStepDefinition {
 	}
 
 
+
 }
+
+
+
