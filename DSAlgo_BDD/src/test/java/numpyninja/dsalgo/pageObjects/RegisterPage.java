@@ -7,10 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class RegisterPage {
 	        
+	public String url;
 	  
 	  public RegisterPage(WebDriver webDriver)
 	  {
 	      PageFactory.initElements(webDriver, this);
+	      url = "https://dsportalapp.herokuapp.com/register";
 	  }
 
 	  @FindBy(name="username")
@@ -28,6 +30,10 @@ public class RegisterPage {
 	  @FindBy(xpath="//input[@value=\'Register\']")
 	  @CacheLookup
 	  WebElement btnRegister;
+	
+	  @FindBy(xpath="/html/body/div[3]")
+	  @CacheLookup
+	  public WebElement alert;
 	  
 	  public void SetUserName(String uName) {
 		   inputUsername.clear();
@@ -52,14 +58,11 @@ public class RegisterPage {
 		   inputPassword2.clear();
 		   inputPassword2.sendKeys(uName);
 	  }
-
-
 	  
 	  public void PasswordMismatchErrorDisplayed(String pwd) {
 		   inputPassword2.clear();
 		   inputPassword2.sendKeys(pwd);
 	  }
-
 
 	  public void WeakPasswordErrorDisplayed(String pwd1) {
 		   inputPassword2.clear();
