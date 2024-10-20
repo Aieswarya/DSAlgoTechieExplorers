@@ -66,7 +66,7 @@ WebDriver ldriver;
     }
     
 	public void clickApplications() {
-		btnImplementation.click();
+		btnApplications.click();
 	}
 	
 	public void clickTryhere() {
