@@ -45,6 +45,11 @@ public class QueueStepDefinition extends BaseClass{
 			queuePage.enterInValidCode();
 		}
 
+		@When("The user Clicks Run button")
+		public void the_user_writes_no_code() {
+			queuePage.run();
+		}
+
 		@Then("The User should should be in the same page with the error messages")
 		public void the_user_should_see_an_error_message_in_alert_window() {
 			boolean result = queuePage.alertMsgIsDisplayed();
@@ -59,7 +64,10 @@ public class QueueStepDefinition extends BaseClass{
 	    
 	    @Then("the expected {string} page should open")
 	    public void the_expected_num_page_should_load(String page) {
-	    	Assert.assertEquals(getPageUrl(page), DriverManager.getDriver().getCurrentUrl());
+	    	if (page.equals("Practice"))
+	    		Assert.assertTrue(false);
+	    	else
+	    		Assert.assertEquals(getPageUrl(page), DriverManager.getDriver().getCurrentUrl());
 	    }
 	    
 	    private WebElement getAnchor(String link) {

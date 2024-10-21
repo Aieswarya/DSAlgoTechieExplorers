@@ -1,5 +1,7 @@
 package numpyninja.dsalgo.stepDefinitions;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,6 +13,8 @@ public class RegisterStepDefinition {
 	
 	public RegisterPage registerPage;	
 	public WebDriver chromedriver;
+	private static final Logger LOGGER = LogManager.getLogger(RegisterStepDefinition.class);
+
 
 	@Given("User Launches register page")
 	public void user_launches_chrome_browser() {
@@ -31,9 +35,16 @@ public class RegisterStepDefinition {
 	    registerPage.ClickBtnRegister();
 	}
 	
-	@Then("the alert should appear")
-    public void the_user_should_see_error_message() {
-        Assert.assertTrue(registerPage.alert != null);
+	@Then("the {string} error should appear")
+    public void the_user_should_see_error_message(String error) {
+		System.out.println(registerPage.ErrorMessage());
+        Assert.assertEquals(error, registerPage.ErrorMessage());
+        Assert.assertTrue(true);
+    }
+	
+	@Then("the error should appear")
+    public void the_uer_should_see_error_message() {
+		System.out.println(registerPage.ErrorMessage());
     }	
 
 	/*

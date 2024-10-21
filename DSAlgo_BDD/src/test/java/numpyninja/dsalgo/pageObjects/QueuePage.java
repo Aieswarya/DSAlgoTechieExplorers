@@ -35,7 +35,7 @@ public class QueuePage {
 	public WebElement implementationUsingCollectionsDeque;
 	
 	@FindBy (xpath="//*[contains(@href,'Implementation-array')]")
-	public WebElement implementationUsingArray;;
+	public WebElement implementationUsingArray;
 	
 	@FindBy (xpath="//*[contains(@href,'QueueOp')]")
 	public WebElement queueOperations;
@@ -65,6 +65,10 @@ public class QueuePage {
 		js.executeScript("window.scrollTo(0,0)");
 		gdriver.findElement(By.cssSelector("div:nth-child(1) > textarea"))
 				.sendKeys("print" + constants.PYTHON_EDITOR_INPUT);
+		pythonRun.click();
+	}
+	
+	public void run() {
 		pythonRun.click();
 	}
 

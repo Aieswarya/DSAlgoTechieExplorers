@@ -41,6 +41,11 @@ public class ArrayStepDefinition extends BaseClass {
 		arrayPage.enterInValidCode();
 	}
 
+	@When("The user  Clicks Run button")
+	public void the_user_writes_no_python_code() {
+		arrayPage.run();
+	}
+
 	@Then("The User should should be in the same page with an alert window")
 	public void the_user_should_see_an_error_message_in_alert_window() {
 		boolean result = arrayPage.alertMsgIsDisplayed();

@@ -96,6 +96,10 @@ public class ArrayPage {
 		}
 		return result;
 	}
+	
+	public void run() {
+		pythonRun.click();
+	}
 
 	public boolean alertMsgIsDisplayed() {
 		boolean result = false;

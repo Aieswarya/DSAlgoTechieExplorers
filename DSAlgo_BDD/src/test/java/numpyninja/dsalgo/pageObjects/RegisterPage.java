@@ -33,7 +33,7 @@ public class RegisterPage {
 	
 	  @FindBy(xpath="/html/body/div[3]")
 	  @CacheLookup
-	  public WebElement alert;
+	  WebElement alert;
 	  
 	  public void SetUserName(String uName) {
 		   inputUsername.clear();
@@ -67,6 +67,10 @@ public class RegisterPage {
 	  public void WeakPasswordErrorDisplayed(String pwd1) {
 		   inputPassword2.clear();
 		   inputPassword2.sendKeys(pwd1);
+	  }
+	  
+	  public String ErrorMessage() {
+		  return alert.getText();
 	  }
 
 }

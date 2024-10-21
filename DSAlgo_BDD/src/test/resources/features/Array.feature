@@ -74,6 +74,12 @@ Feature: Array Data Structure
     When The user writes the invalid python code in Editor and Clicks Run button
     Then The User should should be in the same page with an alert window
     
+  Scenario: Testing the Text Editor with no code from "Arrays in Python"
+    When the "Arrays in Python" link is clicked on "Array"
+    When the "Editor" link is clicked on "Arrays in Python"
+    When The user  Clicks Run button
+    Then The User should should be in the same page with an alert window
+    
   Scenario: Checking "Practice" page loads from "Arrays in Python"
     When the "Practice" link is clicked on "Arrays in Python"
     Then the expected "Practice" page should load
@@ -108,6 +114,12 @@ Feature: Array Data Structure
     When the "Arrays using List" link is clicked on "Array"
     When the "Editor" link is clicked on "Arrays using List"
     When The user writes the invalid python code in Editor and Clicks Run button
+    Then The User should should be in the same page with an alert window
+    
+  Scenario: Testing the Text Editor with no code from "Arrays using List"
+    When the "Arrays using List" link is clicked on "Array"
+    When the "Editor" link is clicked on "Arrays using List"
+    When The user  Clicks Run button
     Then The User should should be in the same page with an alert window
     
   Scenario: Checking "Practice" page loads from "Arrays using List"
@@ -146,6 +158,12 @@ Feature: Array Data Structure
     When The user writes the invalid python code in Editor and Clicks Run button
     Then The User should should be in the same page with an alert window
     
+  Scenario: Testing the Text Editor with no code from "Basic Operations in Lists"
+    When the "Basic Operations in Lists" link is clicked on "Array"
+    When the "Editor" link is clicked on "Basic Operations in Lists"
+    When The user  Clicks Run button
+    Then The User should should be in the same page with an alert window
+    
   Scenario: Checking "Practice" page loads from "Basic Operations in Lists"
     When the "Practice" link is clicked on "Basic Operations in Lists"
     Then the expected "Practice" page should load
@@ -180,6 +198,12 @@ Feature: Array Data Structure
     When the "Applications of Array" link is clicked on "Array"
     When the "Editor" link is clicked on "Applications of Array"
     When The user writes the invalid python code in Editor and Clicks Run button
+    Then The User should should be in the same page with an alert window
+    
+  Scenario: Testing the Text Editor with no code from "Applications of Array"
+    When the "Applications of Array" link is clicked on "Array"
+    When the "Editor" link is clicked on "Applications of Array"
+    When The user  Clicks Run button
     Then The User should should be in the same page with an alert window
     
   Scenario: Checking "Practice" page loads from "Applications of Array"
