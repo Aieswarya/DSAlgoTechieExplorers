@@ -7,9 +7,10 @@ import org.junit.Assert;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import numpyninja.dsalgo.pageObjects.GetStarted;
 import numpyninja.dsalgo.pageObjects.Graph;
 import numpyninja.dsalgo.pageObjects.HomePage;
-import numpyninja.dsalgo.pageObjects.SignIn;
+import numpyninja.dsalgo.pageObjects.SignInPage;
 import numpyninja.dsalgo.webdriver_manager.DriverManager;
 
 public class GraphStepDefinition {
@@ -17,13 +18,17 @@ public class GraphStepDefinition {
 	private static final Logger LOGGER = LogManager.getLogger(HomePageStepDefinition.class);
 
 	Graph gp = new Graph(DriverManager.getDriver());
-	SignIn si = new SignIn(DriverManager.getDriver());
+	SignInPage si = new SignInPage(DriverManager.getDriver());
 	HomePage hp = new HomePage(DriverManager.getDriver());
+	GetStarted gs = new GetStarted(DriverManager.getDriver());
 
 	@Given("The user is on DS Home Page with logged in")
 	public void the_user_is_on_DS_Home_Page_with_logged_in() {
-		si.gotologinPg();
-		si.PassCredentials();
+
+		gs.clickgetstartedbtn();
+		si.clickSignIn();
+		si.ValidCredentials();
+		si.clickLogin();
 		LOGGER.info("The user is on DS Home page with logged in ");
 
 	}

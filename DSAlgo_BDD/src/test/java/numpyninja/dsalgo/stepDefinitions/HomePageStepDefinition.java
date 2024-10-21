@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import numpyninja.dsalgo.pageObjects.GetStarted;
 import numpyninja.dsalgo.pageObjects.HomePage;
-import numpyninja.dsalgo.pageObjects.SignIn;
+import numpyninja.dsalgo.pageObjects.SignInPage;
 import numpyninja.dsalgo.webdriver_manager.DriverManager;
 
 import static org.junit.Assert.assertTrue;
@@ -20,7 +20,8 @@ public class HomePageStepDefinition {
 
 	HomePage hp = new HomePage(DriverManager.getDriver());
 
-	SignIn si = new SignIn(DriverManager.getDriver());
+	SignInPage si = new SignInPage(DriverManager.getDriver());
+	GetStarted gs= new GetStarted(DriverManager.getDriver());
 
 	@Given("The user is on DS HomePage")
 	public void the_user_is_on_ds_home_page() {
@@ -131,8 +132,12 @@ public class HomePageStepDefinition {
 
 	@Given("The user is on DSHomePage with sign in")
 	public void the_user_is_on_ds_home_page_with_sign_in() {
-		si.gotologinPg();
-		si.PassCredentials();
+	//	si.gotologinPg();
+	//	si.PassCredentials();
+		gs.clickgetstartedbtn();
+		si.clickSignIn();
+		si.ValidCredentials();
+		si.clickLogin();
 		LOGGER.info("The user is on DSHomePage with sign in");
 	}
 

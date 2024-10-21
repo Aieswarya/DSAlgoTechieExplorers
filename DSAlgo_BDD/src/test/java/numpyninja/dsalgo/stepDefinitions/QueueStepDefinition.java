@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 //import pageObjects.GetStartedPage;
 //import pageObjects.HomePage;
 import numpyninja.dsalgo.pageObjects.QueuePage;
-import numpyninja.dsalgo.pageObjects.SignIn;
+import numpyninja.dsalgo.pageObjects.SignInPage;
 import numpyninja.dsalgo.pageObjects.LoginPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -23,10 +23,11 @@ public class QueueStepDefinition extends BaseClass{
 	    public void the_user_is_logged_in() {
 	    	loginPage = new LoginPage(DriverManager.getDriver());
 	    	queuePage = new QueuePage(DriverManager.getDriver());
-	    	signIn = new SignIn(DriverManager.getDriver());
-	    	
-	    	signIn.gotologinPg();
-	    	signIn.PassCredentials();
+	    	signIn = new SignInPage(DriverManager.getDriver());
+            signIn.navigateSignIn();
+			signIn.clickSignIn();
+			signIn.ValidCredentials();
+			signIn.clickLogin();
 	    }	
 		
 		@When("The user writes the valid python code in Editor and clicks Run button")
