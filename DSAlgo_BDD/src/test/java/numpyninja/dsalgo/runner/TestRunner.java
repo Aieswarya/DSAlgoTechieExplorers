@@ -3,11 +3,14 @@ package numpyninja.dsalgo.runner;
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+//import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 
-@RunWith(Cucumber.class)
+import io.cucumber.testng.CucumberOptions;
+
+//@RunWith(Cucumber.class)
 @CucumberOptions(
-		features={"src/test/resources/features/"},
+		features={"src/test/resources/features/HomePage.feature"},
 		glue={"numpyninja.dsalgo.stepDefinitions"},
 		dryRun=false,
 		monochrome=false,
@@ -19,6 +22,6 @@ import io.cucumber.junit.CucumberOptions;
 		publish=true
 		//tags=@sanity
 		)
-public class TestRunner {
+public class TestRunner extends AbstractTestNGCucumberTests{
 
 }
