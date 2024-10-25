@@ -1,5 +1,7 @@
 package numpyninja.dsalgo.stepDefinitions;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 
 import org.apache.logging.log4j.LogManager;
@@ -20,6 +22,7 @@ public class Hooks {
 
 	public static final Logger LOGGER = LogManager.getLogger(Hooks.class);
 
+	
 	@Before
 	public void beforeScenario() {
 		LOGGER.info("Execution started..");
@@ -36,7 +39,7 @@ public class Hooks {
 			System.out.println("I am going to call launchbrowser");
 			DriverManager.launchBrowser();
 			System.out.println("Driver value is set");
-			DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+			DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			DriverManager.getDriver().get(Constants.APP_URL);
 
 			LOGGER.info("DS Algo website launched");

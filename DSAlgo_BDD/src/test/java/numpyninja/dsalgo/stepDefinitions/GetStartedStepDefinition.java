@@ -7,7 +7,7 @@ import org.junit.Assert;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import numpyninja.dsalgo.pageObjects.GetStarted;
+import numpyninja.dsalgo.pagefactory.GetStarted;
 import numpyninja.dsalgo.webdriver_manager.DriverManager;
 
 public class GetStartedStepDefinition {

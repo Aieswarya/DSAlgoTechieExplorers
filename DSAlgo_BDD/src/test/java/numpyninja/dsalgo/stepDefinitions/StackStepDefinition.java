@@ -10,10 +10,10 @@ import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import numpyninja.dsalgo.pageObjects.DataStructurePage;
-import numpyninja.dsalgo.pageObjects.GetStarted;
-import numpyninja.dsalgo.pageObjects.SignInPage;
-import numpyninja.dsalgo.pageObjects.StackPage;
+import numpyninja.dsalgo.pagefactory.DataStructurePage;
+import numpyninja.dsalgo.pagefactory.GetStarted;
+import numpyninja.dsalgo.pagefactory.SignInPage;
+import numpyninja.dsalgo.pagefactory.StackPage;
 import numpyninja.dsalgo.webdriver_manager.DriverManager;
 
 public class StackStepDefinition {

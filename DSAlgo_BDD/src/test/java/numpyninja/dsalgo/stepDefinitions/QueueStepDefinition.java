@@ -4,16 +4,15 @@ import org.testng.Assert;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-//import pageObjects.DataStructurePage;
-//import pageObjects.GetStartedPage;
-//import pageObjects.HomePage;
-import numpyninja.dsalgo.pageObjects.QueuePage;
-import numpyninja.dsalgo.pageObjects.SignInPage;
-import numpyninja.dsalgo.pageObjects.LoginPage;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
+
+import numpyninja.dsalgo.pagefactory.LoginPage;
+import numpyninja.dsalgo.pagefactory.QueuePage;
+import numpyninja.dsalgo.pagefactory.SignInPage;
 import numpyninja.dsalgo.utilities.ExcelUtils;
-import numpyninja.dsalgo.utilities.LoginDetails;
+
 import numpyninja.dsalgo.webdriver_manager.DriverManager;
 
 

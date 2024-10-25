@@ -14,7 +14,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import numpyninja.dsalgo.constants.Constants;
-import numpyninja.dsalgo.pageObjects.SignInPage;
+import numpyninja.dsalgo.pagefactory.SignInPage;
 import numpyninja.dsalgo.utilities.ExcelUtils;
 import numpyninja.dsalgo.webdriver_manager.DriverManager;
 

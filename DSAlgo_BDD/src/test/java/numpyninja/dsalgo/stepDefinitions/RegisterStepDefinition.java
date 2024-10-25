@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.*;
-import numpyninja.dsalgo.pageObjects.RegisterPage;
+import numpyninja.dsalgo.pagefactory.RegisterPage;
 import numpyninja.dsalgo.webdriver_manager.DriverManager;
 
 public class RegisterStepDefinition {

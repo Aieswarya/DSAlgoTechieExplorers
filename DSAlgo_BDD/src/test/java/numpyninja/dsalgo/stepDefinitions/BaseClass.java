@@ -1,9 +1,9 @@
 package numpyninja.dsalgo.stepDefinitions;
 
-import numpyninja.dsalgo.pageObjects.ArrayPage;
-import numpyninja.dsalgo.pageObjects.LoginPage;
-import numpyninja.dsalgo.pageObjects.QueuePage;
-import numpyninja.dsalgo.pageObjects.SignInPage;
+import numpyninja.dsalgo.pagefactory.ArrayPage;
+import numpyninja.dsalgo.pagefactory.LoginPage;
+import numpyninja.dsalgo.pagefactory.QueuePage;
+import numpyninja.dsalgo.pagefactory.SignInPage;
 import numpyninja.dsalgo.webdriver_manager.DriverManager;
 
 public class BaseClass {

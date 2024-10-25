@@ -3,9 +3,9 @@ package numpyninja.dsalgo.stepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import numpyninja.dsalgo.pageObjects.GetStarted;
-import numpyninja.dsalgo.pageObjects.HomePage;
-import numpyninja.dsalgo.pageObjects.SignInPage;
+import numpyninja.dsalgo.pagefactory.GetStarted;
+import numpyninja.dsalgo.pagefactory.HomePage;
+import numpyninja.dsalgo.pagefactory.SignInPage;
 import numpyninja.dsalgo.webdriver_manager.DriverManager;
 
 import static org.junit.Assert.assertTrue;

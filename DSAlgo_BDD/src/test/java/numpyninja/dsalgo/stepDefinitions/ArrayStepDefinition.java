@@ -7,9 +7,9 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import numpyninja.dsalgo.pageObjects.ArrayPage;
-import numpyninja.dsalgo.pageObjects.LoginPage;
-import numpyninja.dsalgo.pageObjects.SignInPage;
+import numpyninja.dsalgo.pagefactory.ArrayPage;
+import numpyninja.dsalgo.pagefactory.LoginPage;
+import numpyninja.dsalgo.pagefactory.SignInPage;
 import numpyninja.dsalgo.webdriver_manager.DriverManager;
 
 public class ArrayStepDefinition extends BaseClass {
