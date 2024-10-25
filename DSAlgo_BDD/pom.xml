@@ -157,13 +157,13 @@
 	              <parallel>methods</parallel>
 	            <!--  <useUnlimitedThreads>true</useUnlimitedThreads> -->
 	              <suiteXmlFiles>
-					  <suiteXmlFile>testng.xml</suiteXmlFile>
+					  <suiteXmlFile>crossbrowsertest.xml</suiteXmlFile>
 				  </suiteXmlFiles>
 				  
 				  <properties>
 				       <property>
 				          <name>data-provider-thread-count</name>
-				          <value>3</value>
+				          <value>2</value>
 				       </property>
 				  </properties>
 			   </configuration>
