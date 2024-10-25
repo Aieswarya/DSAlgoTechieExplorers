@@ -1,4 +1,4 @@
-package numpyninja.dsalgo.pageObjects;
+package numpyninja.dsalgo.pagefactory;
 
 
 import org.openqa.selenium.WebDriver;

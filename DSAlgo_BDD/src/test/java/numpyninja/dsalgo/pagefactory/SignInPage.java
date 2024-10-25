@@ -1,4 +1,4 @@
-package numpyninja.dsalgo.pageObjects;
+package numpyninja.dsalgo.pagefactory;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -1,4 +1,4 @@
-package numpyninja.dsalgo.pageObjects;
+package numpyninja.dsalgo.pagefactory;
 
 import org.junit.runners.model.Statement;
 import org.openqa.selenium.StaleElementReferenceException;

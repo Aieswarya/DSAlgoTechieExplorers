@@ -1,4 +1,4 @@
-package numpyninja.dsalgo.pageObjects;
+package numpyninja.dsalgo.pagefactory;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

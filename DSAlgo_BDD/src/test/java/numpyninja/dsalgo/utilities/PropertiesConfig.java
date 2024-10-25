@@ -12,7 +12,25 @@ public class PropertiesConfig {
 
 	public  void loadProperties()
 	{
+		Properties properties = new Properties();
+		try {
+			properties.load(getClass().getResourceAsStream("/Config.properties"));
+		}
+		catch(Exception exception)
+		{
+			exception.printStackTrace();
+		}
+		// read values from config.properties file and set it to constants variable
+		Constants.APP_URL=properties.getProperty("appURL");
+		Constants.BROWSER=properties.getProperty("browser");
+		Constants.EXECUTION_ENVIRONMENT=properties.getProperty("execution_env");
+		Constants.OS_TYPE=properties.getProperty("os");
 
+	}
+
+	public void setPropertiesforCrossbrowsertesting(String browser) {
+		
+		
 		Properties properties = new Properties();
 
 		try {
@@ -24,16 +42,11 @@ public class PropertiesConfig {
 		{
 			exception.printStackTrace();
 		}
-
-
-
-		Constants.APP_URL=properties.getProperty("appURL");
-		Constants.BROWSER=properties.getProperty("browser");
+		Constants.BROWSER=browser; // set values of browser from cross browser test runner
+		Constants.APP_URL=properties.getProperty("appURL");	
 		Constants.EXECUTION_ENVIRONMENT=properties.getProperty("execution_env");
 		Constants.OS_TYPE=properties.getProperty("os");
-
 	}
-
 
 
 }

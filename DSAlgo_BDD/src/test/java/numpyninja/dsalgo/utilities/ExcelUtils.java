@@ -17,23 +17,16 @@ public class ExcelUtils {
 
 		try {
 			Constants constants = new Constants();
-
 			FileInputStream file = new FileInputStream(new File("Data.xlsx"));
-
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
-
 			Sheet sheet1 = workbook.getSheet("VALID_LOGIN");
-
 			Row row1 = sheet1.getRow(1);
-
-			Constants.USERNAME = row1.getCell(0).getStringCellValue();
+			Constants.USERNAME = row1.getCell(0).getStringCellValue(); // -- set credential values from properties file
 			constants.PASSWORD = row1.getCell(1).getStringCellValue();
-
 			Sheet sheet2 = workbook.getSheet("EDITOR");
 			Row row2 = sheet2.getRow(1);
-			constants.PYTHON_EDITOR_INPUT = row2.getCell(0).getStringCellValue();
+			constants.PYTHON_EDITOR_INPUT = row2.getCell(0).getStringCellValue(); // --set python editor values
 			constants.PYTHON_EDITOR_OUTPUT = row2.getCell(1).getStringCellValue();
-
 			workbook.close();
 		} catch (IOException exception) {
 			exception.printStackTrace();
