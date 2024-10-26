@@ -12,6 +12,7 @@ public class PropertiesConfig {
 
 	public  void loadProperties()
 	{
+		System.out.println("I am inside load properties of Propertiesconfig");
 		Properties properties = new Properties();
 		try {
 			properties.load(getClass().getResourceAsStream("/Config.properties"));
@@ -30,7 +31,7 @@ public class PropertiesConfig {
 
 	public void setPropertiesforCrossbrowsertesting(String browser) {
 		
-		
+		System.out.println("I am inside cross browser testing load properties of Propertiesconfig");
 		Properties properties = new Properties();
 
 		try {
