@@ -10,7 +10,7 @@ import numpyninja.dsalgo.utilities.PropertiesConfig;
 
 @CucumberOptions(features = { "src/test/resources/features/HomePage.feature" }, glue = {
 		"numpyninja.dsalgo.stepDefinitions" }, dryRun = false, monochrome = false, plugin = {
-				"rerun:failed_scenarios/failed_scenarios.txt", "html:target/cucumber-reports/report.html", "pretty",
+				"rerun:failed_scenarios/failed_scenarios.txt", "json:target/cucumber-reports/Cucumber.json", "pretty",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" }, publish = true
 // tags=@sanity
