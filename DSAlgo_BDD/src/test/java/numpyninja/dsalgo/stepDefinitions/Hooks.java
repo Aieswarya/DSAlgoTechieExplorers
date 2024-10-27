@@ -23,27 +23,22 @@ public class Hooks {
 	public static final Logger LOGGER = LogManager.getLogger(Hooks.class);
 
 	
-	@Before
+	//@Before
 	public void beforeScenario() {
 		LOGGER.info("Execution started..");
-		System.out.println("In Hooks class started ....");
+		
 		try {
 
 			PropertiesConfig propertiesConfig = new PropertiesConfig();
-
 			propertiesConfig.loadProperties();
-
 			ExcelUtils excelutils = new ExcelUtils();
-
-			excelutils.getLogin();
-			System.out.println("I am going to call launchbrowser");
-			DriverManager.launchBrowser();
-			System.out.println("Driver value is set");
+			ExcelUtils.getLogin();
+			DriverManager.launchBrowser();			
 			DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			DriverManager.getDriver().get(Constants.APP_URL);
 
 			LOGGER.info("DS Algo website launched");
-			System.out.println("Completed launching website");
+			
 
 		} catch (Exception exception) {
 			exception.printStackTrace();
@@ -52,16 +47,15 @@ public class Hooks {
 
 	}
 
-	@After
+	//@After
 	public void teardown() {
-		//DriverManager.getDriver().close();
+		
 		DriverManager.getDriver().quit();
-	
 		LOGGER.info("Driver is shutdown");
-		System.out.println("shutting down");
+		
 	}
 
-	@AfterStep
+	//@AfterStep
 	public void attachScreenshot(Scenario scenario) {
 		if (scenario.isFailed()) {
 			byte[] screenshotTaken = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);

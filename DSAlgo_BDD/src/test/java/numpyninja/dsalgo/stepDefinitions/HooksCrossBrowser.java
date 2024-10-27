@@ -21,7 +21,7 @@ public class HooksCrossBrowser {
 	public static final Logger LOGGER = LogManager.getLogger(Hooks.class);
 
 	
-	//@Before
+	@Before
 	public void beforeScenario() {
 		LOGGER.info("Execution started..");
 		
@@ -44,7 +44,7 @@ public class HooksCrossBrowser {
 
 	}
 
-	//@After
+	@After
 	public void teardown() {
 		
 		DriverManager.getDriver().quit();
@@ -52,7 +52,7 @@ public class HooksCrossBrowser {
 		
 	}
 
-	//@AfterStep
+	@AfterStep
 	public void attachScreenshot(Scenario scenario) {
 		if (scenario.isFailed()) {
 			byte[] screenshotTaken = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
