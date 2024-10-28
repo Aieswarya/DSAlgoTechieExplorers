@@ -1,7 +1,6 @@
 package numpyninja.dsalgo.stepDefinitions;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+
 import java.time.Duration;
 
 import org.apache.logging.log4j.LogManager;
@@ -23,31 +22,28 @@ public class Hooks {
 	public static final Logger LOGGER = LogManager.getLogger(Hooks.class);
 
 	
-	//@Before
+	@Before
 	public void beforeScenario() {
 		LOGGER.info("Execution started..");
 		
 		try {
 
 			PropertiesConfig propertiesConfig = new PropertiesConfig();
-			propertiesConfig.loadProperties();
+			propertiesConfig.loadProperties();   // To read values from Confid.properties file
 			ExcelUtils excelutils = new ExcelUtils();
 			ExcelUtils.getLogin();
-			DriverManager.launchBrowser();			
+			DriverManager.launchBrowser();	// sets driverValue
 			DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			DriverManager.getDriver().get(Constants.APP_URL);
+			DriverManager.getDriver().get(Constants.APP_URL); //launches DSAlgo Website
 
 			LOGGER.info("DS Algo website launched");
-			
-
 		} catch (Exception exception) {
 			exception.printStackTrace();
 
 		}
+		}
 
-	}
-
-	//@After
+	@After
 	public void teardown() {
 		
 		DriverManager.getDriver().quit();
@@ -55,7 +51,7 @@ public class Hooks {
 		
 	}
 
-	//@AfterStep
+	@AfterStep
 	public void attachScreenshot(Scenario scenario) {
 		if (scenario.isFailed()) {
 			byte[] screenshotTaken = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);

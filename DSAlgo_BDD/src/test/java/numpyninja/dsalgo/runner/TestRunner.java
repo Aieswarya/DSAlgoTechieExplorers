@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features={"src/test/resources/features/HomePage.feature"},
+		features={"src/test/resources/features"},
 		glue={"numpyninja.dsalgo.stepDefinitions"},
 		dryRun=false,
 		monochrome=false,

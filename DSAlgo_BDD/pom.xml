@@ -7,7 +7,17 @@
   <groupId>DSAlgo_BDD</groupId>
   <artifactId>DSAlgo_BDD</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
+  <reporting>
+  <excludeDefaults>true</excludeDefaults>
+  <plugins>
+  <plugin>
+  <groupId>io.qameta.allure</groupId>
+  <artifactId>allure-maven</artifactId>
+  <version>2.31.0</version>
+  </plugin>
+  </plugins>
+  
+  </reporting>
   <name>DSAlgo_BDD</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -157,7 +167,7 @@
 	              <parallel>methods</parallel>
 	            <!--  <useUnlimitedThreads>true</useUnlimitedThreads> -->
 	              <suiteXmlFiles>
-					  <suiteXmlFile>crossbrowsertest.xml</suiteXmlFile>
+					  <suiteXmlFile>testng.xml</suiteXmlFile>
 				  </suiteXmlFiles>
 				  
 				  <properties>
