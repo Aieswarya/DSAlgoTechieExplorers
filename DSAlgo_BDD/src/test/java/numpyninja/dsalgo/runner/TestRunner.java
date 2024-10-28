@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
 		dryRun=false,
 		monochrome=false,
 		plugin= {"rerun:failed_scenarios/failed_scenarios.txt",
-				"html:target/cucumber-reports/report.html",
+				"json:target/cucumber-reports/Cucumber.json",
 				"pretty",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
