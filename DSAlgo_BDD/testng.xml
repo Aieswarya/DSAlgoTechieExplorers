@@ -6,4 +6,9 @@
       <class name="numpyninja.dsalgo.runner.TestRunner"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Failed Test ReRun">
+		<classes>
+			<class name="numpyninja.dsalgo.runner.FailedTestReRun" />
+		</classes>
+	</test>
 </suite> <!-- Suite -->

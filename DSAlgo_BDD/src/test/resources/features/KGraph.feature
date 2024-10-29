@@ -2,6 +2,7 @@ Feature: Graph
 
   Background: The user is signed in
     Given The user is on DS Home Page with logged in
+    #When The user logs in the DS Home Page
 
   Scenario: The user navigates to Graph page from graph home page
     Given The user is on the Graph home page

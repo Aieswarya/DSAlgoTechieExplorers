@@ -8,7 +8,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import numpyninja.dsalgo.utilities.PropertiesConfig;
 
-@CucumberOptions(features = { "src/test/resources/features/HomePage.feature" }, glue = {
+@CucumberOptions(features = { "src/test/resources/features" }, glue = {
 		"numpyninja.dsalgo.stepDefinitions" }, dryRun = false, monochrome = false, plugin = {
 				"rerun:failed_scenarios/failed_scenarios.txt", "json:target/cucumber-reports/Cucumber.json", "pretty",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
@@ -26,7 +26,7 @@ public class TestRunnerCrossBrowser extends AbstractTestNGCucumberTests {
 	}
 
 	@Override
-	@DataProvider(parallel = true)
+	@DataProvider(parallel = false)
 	public Object[][] scenarios() {
 		return super.scenarios();
 	}

@@ -1,20 +1,3 @@
-# Author: your.email@your.domain.com
-# Keywords Summary:
-# Feature: List of scenarios.
-# Scenario: Business rule through list of steps with arguments.
-# Given: Some precondition step
-# When: Some key actions
-# Then: To observe outcomes or validation
-# And, But: To enumerate more Given, When, Then steps
-# Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
-# Examples: Container for a table
-# Background: List of steps run before each of the scenarios
-# """ (Doc Strings)
-# | (Data Tables)
-# @ (Tags/Labels): To group Scenarios
-# <> (placeholder)
-# "" (Comments)
-# Sample Feature Definition Template
 Feature: Array Data Structure
 
   Background: Login to the page
@@ -207,14 +190,3 @@ Feature: Array Data Structure
   Scenario: Checking "Practice" page loads from "Applications of Array"
     When the "Practice" link is clicked on "Applications of Array"
     Then the expected "Practice" page should load
-#  Scenario: Validate the "Try Editor" with incorrect code in Applications of Array
-#    Given The user is on the "Applications of Array" page after logging in
-#    When The user clicks on the "Try Here" button in the Applications of Array page
-#    Then The user should be redirected to a page with a "Try Editor" and a "Run" button to test arrays in applications
-#    When The user enters the following incorrect code into the "Try Editor"
-#      """python
-#      arr = [1, 2, 3]
-#      print(arr[0] + arr[1
-#      """
-#    And The user clicks on the "Run" button
-#    Then The user should see an error message 
